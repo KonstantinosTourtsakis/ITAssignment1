@@ -1,7 +1,7 @@
 
 
 body{
-	background-color: #1aa07c;
+	background-color: red;
 }
 
 nav{
@@ -15,8 +15,7 @@ nav{
 
 form {
 	display: block;
-	text-align: left;
-	font-size: 140%;
+	text-align: center;
 	background-color: red;
 	margin-left: 15%;
 	margin-right: 15%;
@@ -34,7 +33,7 @@ form {
 
 @font-face{
 	font-family: main_font;
-	src: url("./assets/luckiest-guy.ttf");
+	src: url("./assets/redemption.ttf");
 }
 
 .navlink{
@@ -48,22 +47,6 @@ form {
 
 .navlink:hover{
 	color:blue;
-	/*text-decoration: underline;*/
-	transition: color 600ms;
-}
-
-
-.footlink{
-	color: grey;
-	display:inline-block; 
-	margin-right:10px;
-	text-decoration: none;
-	font-family: Times;
-}
-
-
-.footlink:hover{
-	color: white;
 	/*text-decoration: underline;*/
 	transition: color 600ms;
 }
