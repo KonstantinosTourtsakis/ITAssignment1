@@ -1,12 +1,6 @@
 
 
 
-function loadCookies(){
-    var cookiesString = document.cookie;
-    document.write("<div>" + cookieString + "</div>");
-}
-
-
 function setActiveStyleSheet(title) {
   var i, a, main;
   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
