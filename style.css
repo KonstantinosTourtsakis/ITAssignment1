@@ -1,23 +1,39 @@
 
 
 body{
-	background-color: #1aa07c;
+	background-color: grey;
 }
 
 nav{
-	text-align: center;
-	background-color: black;
+	text-align: left;
+	background-color: #333;
+	padding-left: 6.7%;
 	padding-bottom: 1%;
 	padding-top: 1%;
-	font-size: 160%;
+	font-size: 130%;
 	
 }
 
+
+.logo{
+	position: fixed;
+	opacity: 60%;
+	transition: opacity 300ms;
+}
+
+.logo:hover{
+	opacity: 100%;
+	transition: opacity 300ms;
+}
+
+
+
 form {
 	display: block;
-	text-align: left;
-	font-size: 140%;
-	background-color: red;
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+	/*background-color: red;*/
 	margin-left: 15%;
 	margin-right: 15%;
 
@@ -29,7 +45,49 @@ form {
 
 .formcont{
 	align-self: center;
+	font-weight: bold;
 }
+
+
+
+.research{
+	list-style-type: none;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 4%;
+	margin-bottom: 4%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border-style: solid;
+	border-width: 5pt;
+	border-color: black;
+	background-color: white;
+	transition: border-color 900ms;
+}
+
+.research:hover{
+	border-color: green;
+	transition: border-color 900ms;
+	cursor: pointer;
+}
+
+
+.serv{
+	
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 6%;
+	margin-bottom: 6%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: white;
+}
+
+
 
 
 @font-face{
@@ -38,7 +96,7 @@ form {
 }
 
 .navlink{
-	color: red;
+	color: black;
 	display:inline-block; 
 	margin-right:10px;
 	text-decoration: none;
@@ -46,8 +104,10 @@ form {
 }
 
 
+
+
 .navlink:hover{
-	color:blue;
+	color:green;
 	/*text-decoration: underline;*/
 	transition: color 600ms;
 }
@@ -76,6 +136,8 @@ form {
 footer{
 	background-color: #333;
 	font-size: 110%;
+	margin-top: 37.7%;
 	padding: 0.4% 0.4%;
+
 	text-align: center;
 }

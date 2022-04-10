@@ -2,20 +2,49 @@
 <html>
 <head>
 	<title>About</title>
-	<LINK REL="stylesheet"
-		TYPE="text/css"
-		HREF="style.css">
+	<link rel="icon" href="./assets/logo.png" type="image/icon">
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body>
+<body onload="loadCookies()">
+
+	<a href = "./"> <img class = "logo" src="./assets/logo.png" width = 100 height = 100> </a>
+
 	<!--Main navigation bar of the website-->
 	<nav>
-		<a class = "navlink" href="./">Home</a>
 		<a class = "navlink" href="./about.html">About</a>
 		<a class = "navlink" href="./services.html">Services</a>
 		<a class = "navlink" href="./appointment.html">Appointment</a>
-		<a class = "navlink" href="./contact.html">Contact</a>
 	</nav>
+
+
+
+	<ul style = "margin-top: 8%;">
+		<li class = "research">
+			<img style = "float: left; margin-right: 2%;" src="./assets/earth.png" width = 100 height = 100>
+			<h4>
+				Our institute has been working hard to ensure that the world remains a safe place for humans to live and evolve.
+				We have been cleaning various parts of the planet and investing on finding new ways to keep our planet clean!
+			</h4>
+		</li>
+		
+		<li class = "research">
+			<img style = "float: left; margin-right: 2%;" src="./assets/energy.png" width = 100 height = 100>
+			<h4>
+				Energy is sustainable if it "meets the needs of the present without compromising the ability of future 
+				generations to meet their own needs".
+			</h4>
+		</li>
+
+		<li class = "research">
+			<img style = "float: left; margin-right: 2%;" src="./assets/tree.png" width = 100 height = 100>
+			<h4>
+				Our institute has been taking place on numerous tree plantings. Trees are required if our goal is to create
+				a green world. Protecting our nature is critical as our lives depend on it.
+			</h4>
+		</li>
+	</ul>
+
 
 
 
@@ -25,6 +54,8 @@
 		<a class = "footlink" href="./">Twitter</a>
 		<a class = "footlink" href="./">Instagram</a>
 		<a class = "footlink" href="./">YouTube</a>
+		<a class = "footlink" onclick="setActiveStyleSheet('alternate 2'); return false;" > Default style</a>
+		<a class = "footlink" onclick="setActiveStyleSheet('alternate 1'); return false;" > Style 02</a> 
 	</footer>
 
 </body>

@@ -2,73 +2,55 @@
 <html>
 <head>
 	<title>Services</title>
-	<link rel="icon" href="./images/logo.png" type="image/icon">
-	<LINK REL="stylesheet"
-		TYPE="text/css"
-		HREF="style.css">
+	<link rel="icon" href="./assets/logo.png" type="image/icon">
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body>
+<body onload="loadCookies()">
+	
+	<a href = "./"> <img class = "logo" src="./assets/logo.png" width = 100 height = 100> </a>
 
 	<!--Main navigation bar of the website-->
 	<nav>
-		<a class = "navlink" href="./">Home</a>
 		<a class = "navlink" href="./about.html">About</a>
 		<a class = "navlink" href="./services.html">Services</a>
 		<a class = "navlink" href="./appointment.html">Appointment</a>
-		<a class = "navlink" href="./contact.html">Contact</a>
 	</nav>
 
 
-	<ul>
-		<li>History: </li>
-		<li>Departments: </li>
-		<li>Organogramma: </li>
-		<li>Work: </li>
-		<li>Goals: </li>
-		
-	</ul>
 
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
-	<h1 style="text-align: center;"> . </h1>
+	<div class = "serv">
+		<h2>History</h2>
+		<h4>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mollis mollis ex, vitae ultricies est imperdiet 
+			non. Duis vitae sagittis neque. Nam vel fermentum eros, id aliquam ipsum.
+		</h4>
+	</div> <hr>
+
+	<div class = "serv">
+		<h2>Structure</h2>
+		<h4>
+			Mauris quis pharetra mauris. Sed tempor ipsum est, et tincidunt nisl faucibus sed. Nulla sit amet interdum elit.
+			Ut hendrerit, enim non molestie congue, nunc justo iaculis lectus, ac tincidunt purus ipsum quis odio. 
+		</h4>
+	</div> <hr>
+
+	<a href="./" >
+	<div class = "serv">
+		<h2>Organization chart</h2>
+		<h4>
+			Phasellus vulputate mattis dolor ac hendrerit. Sed nec laoreet risus, non maximus elit. Proin magna nunc, bibendum
+			ut luctus ut, efficitur vel metus. Ut nec felis ut tortor auctor rhoncus at et lacus.
+		</h4>
+	</div> </a> <hr>
+
+	<div class = "serv">
+		<h2>Departments</h2>
+		<h4>
+			Etiam vitae urna efficitur, cursus tortor in, porttitor lorem. Morbi interdum nibh vitae aliquam condimentum. 
+			Cras mollis ullamcorper semper. Mauris ac odio lobortis, varius urna vitae, venenatis enim.
+		</h4>
+	</div>
 	
 	
 	
@@ -79,6 +61,8 @@
 		<a class = "footlink" href="./">Twitter</a>
 		<a class = "footlink" href="./">Instagram</a>
 		<a class = "footlink" href="./">YouTube</a>
+		<a class = "footlink" onclick="setActiveStyleSheet('alternate 2'); return false;" > Default style</a>
+		<a class = "footlink" onclick="setActiveStyleSheet('alternate 1'); return false;" > Style 02</a> 
 	</footer>
 </body>
 </html>
