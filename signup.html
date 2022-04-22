@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<link rel="icon" href="./assets/logo.png" type="image/icon">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<script type="text/javascript" src="signup.js"> </script>
+</head>
+
+<body>
+
+	<!-- Website logo -->
+	<a href = "./index.html"> <img class = "logo" src="./assets/logo.png" width = 100 height = 100> </a>
+
+	<!--Main navigation bar of the website-->
+	<nav>
+		<a class = "navlink" href="./about.html">About</a>
+		<a class = "navlink" href="./services.html">Services</a>
+		<a class = "navlink" href="./appointment.html">Appointment</a>
+		<a class = "navlink" href="./signup.html">Sign up</a>
+	</nav>
+	
+	<br> <br> <br>
+	<!--<br> <br> <br> <br> <br> <br> -->
+
+
+	<h2 style = "text-align: center;">Sign up.</h2>
+	<!--Sign up form-->
+	<form name="signUpForm" onsubmit = "return validateSignUpForm()" method = "post">
+		<label for="fname">*Name:</label> <br>
+		<input class = "formcont" type="text" id="fname"> <br> <br>
+
+		<label for="ffname">Father's name:</label> <br>
+		<input class = "formcont" type="text" id="ffname"> <br> <br>
+
+		<label for="fage">*Age:</label> <br>
+		<input class = "formcont" type="number" id="fage" min="18"> <br> <br>
+
+		<label for="fphone">Phone number:</label> <br>
+		<input class = "formcont" type="number" id="fphone" min="1000000000" max="9999999999"> <br> <br>
+
+		<label for="fmail">*E-mail:</label> <br>
+		<input type="email" id="fmail"> <br> <br>
+
+		<label for="fafm">*AFM:</label> <br>
+		<input class = "formcont" type="number" id="fafm" min="100000000" max="999999999"> <br> <br>
+
+		<label for="famka">AMKA:</label> <br>
+		<input class = "formcont" type="number" id="famka" min="10000000000" max="99999999999"> <br> <br>
+
+		<label for="fccnumb">*Credit card number:</label> <br>
+		<input class = "formcont" type="number" id="fccnumb" min="1000000000000000" max="9999999999999999"> <br> <br>
+
+		<label for="fccexp">*Credit card expiration date:</label> <br>
+		<input class = "formcont" type="date" id="fccexp"> <br> <br>
+
+		<label for="fccaddr">*Credit card address:</label> <br>
+		<input class = "formcont" type="text" id="fccaddr"> <br> <br>
+		
+		<label for="fcomment">Comments:</label> <br>
+		<input class = "formcont" type="text" id="fcomment" maxlength="250"> <br> <br>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Clear">
+	</form>
+
+
+	<!-- Social media links and style switcher buttons -->
+	<footer>
+		<h5>© 2022 Konstantinos Tourtsakis</h5>
+		<a class = "footlink" href="./">Facebook</a>
+		<a class = "footlink" href="./">Twitter</a>
+		<a class = "footlink" href="./">Instagram</a>
+		<a class = "footlink" href="./">YouTube</a>
+		<a class = "footlink" onclick="setActiveStyleSheet('alternate 2'); return false;" > Default style</a>
+		<a class = "footlink" onclick="setActiveStyleSheet('alternate 1'); return false;" > Style 02</a> 
+	</footer>
+</body>
+</html>
