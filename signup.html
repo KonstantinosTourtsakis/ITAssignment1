@@ -27,39 +27,39 @@
 
 	<h2 style = "text-align: center;">Sign up.</h2>
 	<!--Sign up form-->
-	<form name="signUpForm" onsubmit = "return validateSignUpForm()" method = "post">
+	<form name="signUpForm" onsubmit = "return validateSignUpForm()" action="signup.php" method = "post">
 		<label for="fname">*Name:</label> <br>
-		<input class = "formcont" type="text" id="fname"> <br> <br>
+		<input class = "formcont" type="text" name="fname" id="fname" placeholder="first_name"> <br> <br>
 
 		<label for="ffname">Father's name:</label> <br>
-		<input class = "formcont" type="text" id="ffname"> <br> <br>
+		<input class = "formcont" type="text" id="ffname" name="ffname"> <br> <br>
 
 		<label for="fage">*Age:</label> <br>
-		<input class = "formcont" type="number" id="fage" min="18"> <br> <br>
+		<input class = "formcont" type="number" id="fage" name="fage" min="18"> <br> <br>
 
 		<label for="fphone">Phone number:</label> <br>
-		<input class = "formcont" type="number" id="fphone" min="1000000000" max="9999999999"> <br> <br>
+		<input class = "formcont" type="number" id="fphone" name="fphone" min="1000000000" max="9999999999"> <br> <br>
 
 		<label for="fmail">*E-mail:</label> <br>
-		<input type="email" id="fmail"> <br> <br>
+		<input type="email" id="fmail" name="fmail"> <br> <br>
 
 		<label for="fafm">*AFM:</label> <br>
-		<input class = "formcont" type="number" id="fafm" min="100000000" max="999999999"> <br> <br>
+		<input class = "formcont" type="number" id="fafm" name="fafm" min="100000000" max="999999999"> <br> <br>
 
 		<label for="famka">AMKA:</label> <br>
-		<input class = "formcont" type="number" id="famka" min="10000000000" max="99999999999"> <br> <br>
+		<input class = "formcont" type="number" id="famka" name="famka" min="10000000000" max="99999999999"> <br> <br>
 
 		<label for="fccnumb">*Credit card number:</label> <br>
-		<input class = "formcont" type="number" id="fccnumb" min="1000000000000000" max="9999999999999999"> <br> <br>
+		<input class = "formcont" type="number" id="fccnumb" name="fccnumb" min="1000000000000000" max="9999999999999999"> <br> <br>
 
 		<label for="fccexp">*Credit card expiration date:</label> <br>
-		<input class = "formcont" type="date" id="fccexp"> <br> <br>
+		<input class = "formcont" type="date" id="fccexp" name="fccexp"> <br> <br>
 
 		<label for="fccaddr">*Credit card address:</label> <br>
-		<input class = "formcont" type="text" id="fccaddr"> <br> <br>
+		<input class = "formcont" type="text" id="fccaddr" name="fccaddr"> <br> <br>
 		
 		<label for="fcomment">Comments:</label> <br>
-		<input class = "formcont" type="text" id="fcomment" maxlength="250"> <br> <br>
+		<input class = "formcont" type="text" id="fcomment" name="fcomment" maxlength="250"> <br> <br>
 
 		<input type="submit" value="Submit">
 		<input type="reset" value="Clear">
