@@ -24,6 +24,22 @@
 	<br> <br> <br>
 	<!--<br> <br> <br> <br> <br> <br> -->
 
+	<?php
+		$servername = "RESDB";
+		$username = "root";
+		$password = "";
+		// Create connection
+		$conn = mysqli_connect($servername, $username,
+		$password);
+		// Check connection
+		if (!$conn) 
+		{
+			die("Connection failed: " .
+			mysqli_connect_error());
+		}
+		echo "Connected successfully";
+	?>
+
 	<h2> Your new account has successfully been created! </h2>
 	<h3> The following data have been saved. </h3> <br>
 	
