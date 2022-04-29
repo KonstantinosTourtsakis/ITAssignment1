@@ -7,7 +7,7 @@
 function validateSignUpForm() 
 {
 	let username = document.forms["signUpForm"]["fname"].value;
-	let father = document.forms["signUpForm"]["ffname"].value;
+	let father = document.forms["signUpForm"]["ffather"].value;
 	let age = document.forms["signUpForm"]["fage"].value;
 	let email = document.forms["signUpForm"]["fmail"].value;
 	//let afm = document.forms["signUpForm"]["fafm"].value;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign up</title>
+	<title>Query</title>
 	<link rel="icon" href="./assets/logo.png" type="image/icon">
 	<link rel="stylesheet" type="text/css" href="style.css" />
 
@@ -50,7 +50,6 @@
 
 		$query1 = "INSERT INTO account(";
 		$query2 = " VALUES (";
-		$output = "";
 		
 		// Looping through the form fields and creating the respective SQL query
 		// to inser the data into the database
@@ -62,16 +61,17 @@
 			} 
 			else 
 			{
-				$temp = $_POST[$arrFORM[$i]];
-				$output .= "$temp has been added to database | Column: $arrDB[$i] <br>";
+				
 				if(is_numeric($_POST[$arrFORM[$i]]))
 				{
 					$query1 .= "$arrDB[$i], ";
+					$temp = $_POST[$arrFORM[$i]];
 					$query2 .= "$temp, ";
 				}
 				else
 				{
 					$query1 .= "$arrDB[$i], ";
+					$temp = $_POST[$arrFORM[$i]];
 					$query2 .= "'$temp', ";
 				}
 				
@@ -99,15 +99,18 @@
 		{
 			die("Connection failed: " . mysqli_connect_error());
 		}
+		echo "Connected successfully";
 
 		// Executing query
 		if (mysqli_query($conn, $finalquery)) 
 		{
-			echo "$output";
+			echo "New record created successfully";
+		
 		} 
 		else 
 		{
 			echo "Error: " . $finalquery . "<br>" . mysqli_error($conn);
+		
 		}
 
 
