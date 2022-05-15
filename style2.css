@@ -1,7 +1,20 @@
 
 
+
+
+
+
+/* custom font located at /assets/luckiest-guy.ttf */
+@font-face{
+	font-family: main_font;
+	src: url("./assets/luckiest-guy.ttf");
+}
+
+
+
+
 body{
-	background-color: white;
+	background-color: #2f4f4f;
 }
 
 nav{
@@ -33,20 +46,19 @@ form {
 	text-align: center;
 	font-weight: bold;
 	font-size: 110%;
-	/*background-color: red;*/
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 25%;
+	margin-right: 25%;
+	background-color: white;
+	border-style: solid;
+	border-width: 5pt;
+	border-color: black;
+	border-radius: 14%;
 
-	padding-top: 1%;
-	padding-bottom: 1%;
-
-	padding-left: 1%;
+	padding-top: 4%;
+	padding-bottom: 4%;
 }
 
-.formcont{
-	align-self: center;
-	font-weight: bold;
-}
+
 
 
 
@@ -89,11 +101,6 @@ form {
 
 
 
-
-@font-face{
-	font-family: main_font;
-	src: url("./assets/luckiest-guy.ttf");
-}
 
 .navlink{
 	color: black;

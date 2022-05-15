@@ -1,19 +1,26 @@
 
 
-// This file is used to validate the Sign Up form fields
 
 
 
+
+// This function is used to validate the Sign Up form fields
 function validateSignUpForm() 
 {
 	let username = document.forms["signUpForm"]["fname"].value;
 	let father = document.forms["signUpForm"]["ffather"].value;
 	let age = document.forms["signUpForm"]["fage"].value;
 	let email = document.forms["signUpForm"]["fmail"].value;
-	//let afm = document.forms["signUpForm"]["fafm"].value;
+	let ccexp_date = document.forms["signUpForm"]["fccexp"].value;
+	let afm = document.forms["signUpForm"]["fafm"].value;
+	let ccnumb = document.forms["signUpForm"]["fccnumb"].value;
+	//let ccexp_date = document.forms["signUpForm"]["fccexp"].value;
 	//let amka = document.forms["signUpForm"]["famka"].value;
 	let ccaddr = document.forms["signUpForm"]["fccaddr"].value;
 
+
+
+	//Validating each of the above fields
 	// Name field validation
 	if (username == "") 
 	{
@@ -53,6 +60,13 @@ function validateSignUpForm()
 		return false;
 	}
 
+	if (Date.parse(ccexp_date) < Date.now()) 
+	{
+    	//document.getElementById('InsertRecordGuestOrders_Delivery_date').value = '';
+    	alert("Credit card expiration date has to be later than today");
+    	return false;
+    }
+
 
 
 	// Email field validation
@@ -68,17 +82,28 @@ function validateSignUpForm()
 		return false;
 	}
 
+	// AFM field validation
+	if(afm == "")
+	{
+		alert("Afm must be filled out");
+		return false;
+	}
+
+	//Credit card number field validation
+	if(ccnumb == "")
+	{
+		alert("Credit card number must be filled out");
+		return false;
+	}
+
+	
+
 	// Credit card address field validation
 	if(ccaddr == "")
 	{
 		alert("Credit card address must be filled out");
 		return false;
 	}
-
-
-
-
-
 
 
 }

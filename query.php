@@ -4,8 +4,9 @@
 	<title>Query</title>
 	<link rel="icon" href="./assets/logo.png" type="image/icon">
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="alternate stylesheet" type="text/css" href="style2.css" title="alternate 1" />
 
-	<script type="text/javascript" src="signup.js"> </script>
+	<script type="text/javascript" src="styleswitcher.js"></script>
 </head>
 
 <body>
@@ -26,6 +27,8 @@
 	<!--<br> <br> <br> <br> <br> <br> -->
 
 	<?php
+		//These arrays are used to loop though the fields of the form
+		//and create a query for the database to write to the corresponding elements
 		// Array that includes the database table column names
 		$arrDB = array(
     		"name",
@@ -35,6 +38,9 @@
     		"email",
     		"afm",
     		"amka",
+    		"ccnumber",
+    		"ccaddr",
+    		"comment"
 		);
 
 		// Array that includes the form ids
@@ -45,11 +51,13 @@
 			"fphone",
 			"fmail",
 			"fafm",
-			"famka"
+			"famka",
+			"fccnumb",
+			"fccaddr",
+			"fcomment"
 		);
 
-		$query1 = "INSERT INTO account(";
-		$query2 = " VALUES (";
+		$query = "SELECT * FROM account WHERE ";
 		
 		// Looping through the form fields and creating the respective SQL query
 		// to inser the data into the database
@@ -64,27 +72,30 @@
 				
 				if(is_numeric($_POST[$arrFORM[$i]]))
 				{
-					$query1 .= "$arrDB[$i], ";
+					if($i > 0)
+					{
+						$query .= " AND ";
+					}
 					$temp = $_POST[$arrFORM[$i]];
-					$query2 .= "$temp, ";
+					$dbfield = "$arrDB[$i]";
+					$query .= "$dbfield = $temp";
 				}
 				else
 				{
-					$query1 .= "$arrDB[$i], ";
+					if($i > 0)
+					{
+						$query .= " AND ";
+					}
+
 					$temp = $_POST[$arrFORM[$i]];
-					$query2 .= "'$temp', ";
+					$dbfield = "$arrDB[$i]";
+					$query .= "$dbfield = \"$temp\"";
 				}
 				
 			}
 		}
-
-		// Constructing final SQL query
-		$query1 = rtrim($query1, ", ");
-		$query1 .= ")";
-		$query2 = rtrim($query2, ", ");
-		$query2 .= ");";
-		$finalquery = $query1 . $query2;
-		//echo $finalquery;
+		
+		echo "$query <br>";
 
 		// Connection details
 		$servername =  "localhost"; //"127.0.0.1"
@@ -99,36 +110,45 @@
 		{
 			die("Connection failed: " . mysqli_connect_error());
 		}
-		echo "Connected successfully";
-
-		// Executing query
-		if (mysqli_query($conn, $finalquery)) 
-		{
-			echo "New record created successfully";
 		
+
+		// executing SQL SELECT query
+		$result = mysqli_query($conn, $query);
+		if (mysqli_num_rows($result) > 0) 
+		{
+  			// output data of each row
+  			while($row = mysqli_fetch_assoc($result)) 
+  			{
+  				$output = "";
+    			for($i = 0; $i < count($arrDB); $i++)
+    			{
+    				$temp1 = $arrDB[$i];
+    				$temp2 = $row["$temp1"];
+    				$output .= "$temp1: $temp2 |";
+    			}
+    			echo "$output <br>";
+  			}
 		} 
 		else 
 		{
-			echo "Error: " . $finalquery . "<br>" . mysqli_error($conn);
-		
+  			echo "0 results <br>";
 		}
 
 
 		mysqli_close($conn);
 	?>
 
-	<h2> Your new account has been successfully created! </h2>
 	
 
-	<!-- Social media links and style switcher buttons -->
+	<!-- Social media links -->
 	<footer>
-		<h5>© 2022 Konstantinos Tourtsakis</h5>
+
+		<h5>&copy; 2022 Konstantinos Tourtsakis</h5>
 		<a class = "footlink" href="./">Facebook</a>
 		<a class = "footlink" href="./">Twitter</a>
 		<a class = "footlink" href="./">Instagram</a>
 		<a class = "footlink" href="./">YouTube</a>
-		<a class = "footlink" onclick="setActiveStyleSheet('alternate 2'); return false;" > Default style</a>
-		<a class = "footlink" onclick="setActiveStyleSheet('alternate 1'); return false;" > Style 02</a> 
+
 	</footer>
 </body>
 </html>

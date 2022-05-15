@@ -1,3 +1,22 @@
+/*This file contains various functions for a functional
+style switcher. The user can choose between 2 different styles.
+This files is used in all website pages as it loads the previously
+chosen style from a cookie.*/
+
+
+
+function SwitchStyle()
+{
+  var style = getActiveStyleSheet();
+  if(style == "alternate 1")
+  {
+    setActiveStyleSheet('alternate 2');
+  }
+  else
+  {
+    setActiveStyleSheet('alternate 1');
+  }
+}
 
 
 

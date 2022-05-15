@@ -4,8 +4,9 @@
 	<title>Sign up</title>
 	<link rel="icon" href="./assets/logo.png" type="image/icon">
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="alternate stylesheet" type="text/css" href="style2.css" title="alternate 1" />
 
-	<script type="text/javascript" src="signup.js"> </script>
+	<script type="text/javascript" src="styleswitcher.js"></script>
 </head>
 
 <body>
@@ -26,6 +27,8 @@
 	<!--<br> <br> <br> <br> <br> <br> -->
 
 	<?php
+		//These arrays are used to loop though the fields of the form
+		//and create a query for the database to write to the corresponding elements
 		// Array that includes the database table column names
 		$arrDB = array(
     		"name",
@@ -35,6 +38,9 @@
     		"email",
     		"afm",
     		"amka",
+    		"ccnumber",
+    		"ccaddr",
+    		"comment"
 		);
 
 		// Array that includes the form ids
@@ -45,7 +51,10 @@
 			"fphone",
 			"fmail",
 			"fafm",
-			"famka"
+			"famka",
+			"fccnumb",
+			"fccaddr",
+			"fcomment"
 		);
 
 		$query1 = "INSERT INTO account(";
@@ -117,15 +126,15 @@
 	<h2> Your new account has been successfully created! </h2>
 	
 
-	<!-- Social media links and style switcher buttons -->
+	<!-- Social media links -->
 	<footer>
-		<h5>© 2022 Konstantinos Tourtsakis</h5>
+
+		<h5>&copy; 2022 Konstantinos Tourtsakis</h5>
 		<a class = "footlink" href="./">Facebook</a>
 		<a class = "footlink" href="./">Twitter</a>
 		<a class = "footlink" href="./">Instagram</a>
 		<a class = "footlink" href="./">YouTube</a>
-		<a class = "footlink" onclick="setActiveStyleSheet('alternate 2'); return false;" > Default style</a>
-		<a class = "footlink" onclick="setActiveStyleSheet('alternate 1'); return false;" > Style 02</a> 
+
 	</footer>
 </body>
 </html>
